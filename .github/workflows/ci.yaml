@@ -1,7 +1,7 @@
-name: ci-golang-workflow
+name: ci-java-spring-workflow
 on: [push]
 jobs:
-  check-application:
+  build-app:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -10,3 +10,12 @@ jobs:
           distribution: "adopt"
           java-version: "17"
       - run: "java -version"
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Execute Gradle build
+        run: ./gradlew build
+
+      - name: Execute Gradle build
+        run: ls /build/libs
