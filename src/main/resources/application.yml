@@ -1,0 +1,5 @@
+spring:
+  graphql:
+    path: /graphql
+    websocket:
+      path: /graphql
