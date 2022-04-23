@@ -37,6 +37,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
+          context: "devops/Dockerfile"
           push: false
           tags: jaksonsneider/spring:graphQL
-          context: devops/Dockerfile
