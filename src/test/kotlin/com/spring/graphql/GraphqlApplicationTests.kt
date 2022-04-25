@@ -17,13 +17,13 @@ class GraphqlApplicationTests {
         Assertions.assertEquals(customersByName[0].id, 1)
     }
 
-    @Test
-    fun graphQLControllerTestCustomers() {
-        val graphQLController = GraphQLController()
-
-        val customersByName = graphQLController.customers()
-
-        Assertions.assertNotNull(customersByName)
-    }
+//    @Test
+//    fun graphQLControllerTestCustomers() {
+//        val graphQLController = GraphQLController()
+//
+//        val customersByName = graphQLController.customers()
+//
+//        Assertions.assertNotNull(customersByName)
+//    }
 
 }
