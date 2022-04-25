@@ -50,11 +50,10 @@ tasks.jacocoTestReport {
     }
 }
 
-//sonarqube {
-//    properties {
-//        property("sonar.projectKey", "spring-kotlin-graphql")
-//        property("sonar.host.url", "http://localhost:9000")
-//        property("sonar.login", "2b6d0e2a29ef926033b07e5ff6218b06b1c805d2")
-//    }
-//}
-
+sonarqube {
+    properties {
+        property "sonar.projectKey", "jaksonlima_spring-graphql-git-actions-sonarqube"
+        property "sonar.organization", "jakson-lima"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
