@@ -12,19 +12,19 @@ import reactor.core.publisher.Flux
 class GraphqlApplication
 
 fun main(args: Array<String>) {
-	runApplication<GraphqlApplication>(*args)
+    runApplication<GraphqlApplication>(*args)
 }
 
 @Controller
 class GraphQLController {
 
-	private val db = listOf(Customer(1, "A"), Customer(2, "B"))
+    private val db = listOf(Customer(1, "A"), Customer(2, "B"))
 
-	@QueryMapping
-	fun customersByName(@Argument name: String) = this.db.filter { it.name == name }
+    @QueryMapping
+    fun customersByName(@Argument name: String) = this.db.filter { it.name == name }
 
-	@SchemaMapping(typeName = "Query", field = "customers")
-	fun customers() = Flux.just(Customer(1, "A"), Customer(2, "B"))
+    @SchemaMapping(typeName = "Query", field = "customers")
+    fun customers() = Flux.just(Customer(1, "A"), Customer(2, "B"))
 
 }
 
