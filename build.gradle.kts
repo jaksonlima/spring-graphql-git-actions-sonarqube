@@ -52,8 +52,8 @@ tasks.jacocoTestReport {
 
 sonarqube {
     properties {
-        property "sonar.projectKey", "jaksonlima_spring-graphql-git-actions-sonarqube"
-        property "sonar.organization", "jakson-lima"
-        property "sonar.host.url", "https://sonarcloud.io"
+        property("sonar.projectKey", "jaksonlima_spring-graphql-git-actions-sonarqube")
+        property("sonar.organization", "jakson-lima")
+        property("sonar.host.url", "https://sonarcloud.io")
     }
 }
