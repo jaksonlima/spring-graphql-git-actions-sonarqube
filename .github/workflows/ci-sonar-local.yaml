@@ -1,11 +1,12 @@
-name: ci-java-spring-workflow
+name: Build Sonar Local
 on:
   pull_request:
     branches:
       - develop
 
 jobs:
-  build-app:
+  build:
+    name: Build Sonar Cloud
     strategy:
       matrix:
         os: ["ubuntu-latest"]
