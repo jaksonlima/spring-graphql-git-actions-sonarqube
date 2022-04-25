@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build Sonar Cloud
+    name: Build Sonar Local
     strategy:
       matrix:
         os: ["ubuntu-latest"]
